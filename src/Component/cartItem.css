@@ -1,0 +1,15 @@
+.item1{
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    padding: 0.4rem;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    color: aliceblue;
+    box-shadow: 2px 4px 5px gray;
+    background-color: rgba(7, 59, 42, 0.945);
+}
+.content{
+    display: flex;
+}
