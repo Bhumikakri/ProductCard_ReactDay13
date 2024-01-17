@@ -65,17 +65,18 @@ const ProductList = () => {
 
   // Generate an array of CartItem components based on the current state
   const cartItems = Products.map((product) => {
-    const quantity = cartState[product.name] || 0;
+    const quantity = cartState[product.name] || null;
     if (quantity > 0) {
       return (
         <CartItem key={product.id} product={product} quantity={quantity} />
       );
     }
-    return null;
+    return quantity;
   });
 
   return (
     <div className="container">
+      <h1 className="heading">Calculation Of ProductList</h1>
       <div className="products" id="product-list">
         <h1>Foods </h1>
         <div className="Allproduct">
@@ -91,7 +92,7 @@ const ProductList = () => {
         </div>
       </div>
       <Cart
-        cartItems={cartItems}
+        cartItems={[...cartItems]}
         totalAmount={calculateTotalAmount(cartItems)}
       />
     </div>

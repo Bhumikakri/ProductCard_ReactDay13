@@ -4,16 +4,29 @@
     width: 60%;
     gap: 1rem;
     height: 60%;
+    position: relative;
 }
 .products{
     width: 55%;
     /* border: 2px solid blue; */
     border-radius: 10px;
+    color: rgb(210, 255, 158);
+    background-color: rgba(121, 5, 5, 0.89);
     box-shadow: 2px 4px 8px rgb(14, 13, 13);;
+    animation: anime 2s ease-in-out;
+}
+.heading{
+    position: absolute;
+    top: -100px;
+    left: 120px;
+    font-size: 3rem;
+    text-decoration: underline;
+    animation: animahead 2s ease-in-out;
 }
 .products h1{
     font-size: 3rem;
     text-align: center;
+    text-shadow: 2px 4px 8px rgb(14, 13, 13);;
 }
 .Allproduct{
     display: flex;
@@ -21,4 +34,69 @@
     gap: 2rem;
     padding: 1rem;
     font-size: 1.4rem;
+}
+@media screen and (max-width: 1224px) and (min-width: 600px) {
+    .container {
+      flex-direction: column;
+      margin: 6rem;
+    }
+
+    .products{
+        width: 100%; 
+    }
+
+    .heading {
+      position: absolute;
+      top: -100px;
+      left: 120px;
+      font-size: 2.2rem;
+      text-decoration: underline;
+      animation: animahead 2s ease-in-out;
+    }
+  }
+
+@media screen and (max-width: 599px) and (min-width:100px ) {
+    .container {
+        width: 100%;
+      flex-direction: column;
+      margin: 6rem;
+      font-size: 1rem;
+    }
+
+    .products{
+        width: 100%; 
+    }
+
+    .heading {
+      position: absolute;
+      top: -100px;
+      left: 70px;
+      font-size: 1.3rem;
+      text-decoration: underline;
+      animation: animahead 2s ease-in-out;
+    }
+  }
+  
+@keyframes animahead {
+    0% {
+      transform: rotatex(0deg);
+    }
+    60% {
+      transform: rotatey(180deg);
+    }
+    100%{
+        transform: rotatey(0deg); 
+    }
+  }
+  
+@keyframes anime {
+    0%{
+      transform: translatey(-80px);
+    }
+    60%{
+        transform: translatey(200px);
+    }
+    100%{
+        transform: translatey(0px);
+    }
 }
