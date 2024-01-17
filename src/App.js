@@ -1,12 +1,14 @@
 import './App.css';
+import React from 'react';
+import ProductList from'./Component/ProductList'; // Adjust the path based on the actual location of ProductList.js
 
-function App() {
+const App = () => {
   return (
-    <>
-    <h1>Hello World</h1>
-    </>
-    
+    <div className='App'>
+      <ProductList />
+    </div>
   );
-}
+};
 
 export default App;
+

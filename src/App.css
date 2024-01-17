@@ -2,9 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: cursive;
 }
-#root{
+.App{
   width: 100vw;
-  height: 100vh;
-  border: 2px solid red;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://www.hdwallpaper.nu/wp-content/uploads/2016/12/fruit-14.jpg');
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width:"1201px") {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .Carts{
+    width: 100%;
+}
 }
